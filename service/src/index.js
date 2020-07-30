@@ -6,7 +6,8 @@ const config = require('config');
 const moment = require('moment');
 const app = new Koa();
 
-const router = new Router();
+// const router = new Router();
+const router = new Router({ prefix: '/api' });
 
 router.get('/', ctx => {
   ctx.body = __filename;

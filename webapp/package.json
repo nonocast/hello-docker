@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker": "docker build -t hello-docker-webapp .",
+    "docker:run": "docker container run -d -p 80:80 hello-docker-webapp"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    depends_on:
+      - api
+    build: webapp
+    ports:
+      - 80:80
+
+  api:
+    build: service
+    expose:
+      - 9800

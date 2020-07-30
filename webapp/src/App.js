@@ -7,8 +7,7 @@ function App(props) {
   return (
     <div className="App">
       <h1>Webapp</h1>
-      <p>service: <span>{window.SERVICE}</span></p>
-      <p>message from serice: <span>{props.message}</span></p>
+      <p>message from service: <span>{props.message}</span></p>
     </div>
   );
 }
@@ -21,8 +20,7 @@ let hoc = (WrappedComponent) => {
     }
 
     async componentDidMount() {
-      let service = window.SERVICE;
-      let response = await axios.get(`${service}/api/message`);
+      let response = await axios.get(`/api/message`);
       let message = response.data.message;
       this.setState({ message });
 

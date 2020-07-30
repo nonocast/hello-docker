@@ -6,10 +6,16 @@
   "author": "nonocast <nonocast@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently 'yarn --cwd service start' 'yarn --cwd webapp start'"
+    "start": "concurrently 'yarn --cwd service start' 'yarn --cwd webapp start'",
+    "docker": "docker build -t hello-docker .",
+    "docker:run": "docker container run -d -p 80:80 -p 9800:9800 hello-docker"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
     "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0"
   }
 }
