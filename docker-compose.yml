@@ -5,9 +5,6 @@ services:
     command:
       - --api.insecure=true
       - --api.dashboard=true
-      - --api.debug=true
-      - --log.level=DEBUG
-      - --providers.docker=true
     ports:
       - "80:80"
       - "8080:8080"
@@ -27,7 +24,7 @@ services:
   api:
     build: service
     expose:
-      - 9800
+      - 9000
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.backend.rule=Host(`localhost`) && PathPrefix(`/api`)"

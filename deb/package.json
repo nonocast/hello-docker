@@ -1,0 +1,10 @@
+{
+  "name": "deb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "docker build -t nonocast/deb .",
+    "start": "docker run -v $(pwd):/out nonocast/deb"
+  }
+}
